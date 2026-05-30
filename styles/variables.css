@@ -7,4 +7,10 @@
   --wght-normal: 410;
   --wght-bold: 715;
   --label-stroke-color: #FFFFFF; /* Переменная для цвета обводки лейбла */
+
+  /* Сердце */
+  --contour-color: #000000;
+  --animation-fill-color: #FF0000;
+  --core-color: #FFFFFF;
+  --sparks-color: #FF0000;
 }
