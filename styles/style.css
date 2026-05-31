@@ -312,6 +312,8 @@
 .dialog__button {
   outline: none;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  isolation: isolate;
 }
 
 .card__button:focus,
@@ -322,13 +324,6 @@
 }
 
 /* Настройка анимации */
-
-.card__button,
-.main__button,
-.dialog__button {
-  position: relative;
-  isolation: isolate;
-}
 
 .card__button::before,
 .main__button::before,
