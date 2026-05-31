@@ -18,18 +18,14 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-}
-
-/* Фон: сложный множественный градиент */
-.bg__multi-point-gradient {
-  position: fixed; /* фиксирую */
-  inset: 0; /* растягиваю */
-  z-index: -1; /* прячу */
+  /* Фон: сложный множественный градиент */
+  background-attachment: fixed;
   background-image:
-    repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+          repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+          repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+          linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
   background-size: cover, cover, cover;
+  background-color: var(--bg-main);
 }
 
 .container-inline-size {
