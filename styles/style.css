@@ -33,7 +33,7 @@
 }
 
 .container-inline-size {
-  inline-size: clamp(375px, calc(260.563px + 30.516vw), 700px);;
+  inline-size: clamp(375px, calc(260.563px + 30.516vw), 700px);
 }
 
 /* Шапка сайта */
@@ -45,8 +45,8 @@
   margin-top: 100px;
   margin-bottom: 100px;
   block-size: clamp(327px, calc(312.563px + 3.85vw), 368px);
-  border: 2px solid #000000;
-  background-color: #FFFFFF;
+  border: 2px solid var(--border-main);
+  background-color: var(--bg-main);
 }
 
 .header__title-box {
@@ -60,7 +60,7 @@
 }
 
 .header__title {
-  font-size: clamp(49px, calc(43.366px + 1.502vw), 65px);;
+  font-size: clamp(49px, calc(43.366px + 1.502vw), 65px);
 }
 
 .header__subtitle {
@@ -81,9 +81,9 @@
 .card {
   display: grid;
   grid-template-rows: min-content clamp(371px, calc(256.563px + 30.516vw), 696px) 1fr min-content;
-  background-color: #FFFFFF;
-  border: 2px solid #000000;
-  margin-bottom: 49px; /* ПОМЕНЯТЬ! */
+  background-color: var(--bg-main);
+  border: 2px solid var(--border-main);
+  margin-bottom: 47px;
 }
 
 .card__title {
@@ -91,7 +91,7 @@
   font-size: 18px;
   display: flex;
   padding: 4px 10px 4px 10px;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid var(--border-main);
 }
 
 .card__image-box {
@@ -143,7 +143,7 @@
   padding: 25px;
   gap: 25px;
   font-size: 18px;
-  border-top: 2px solid #000000;
+  border-top: 2px solid var(--border-main);
 }
 
 .card__button-box {
@@ -169,14 +169,14 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: #000000;
+  border-color: var(--border-main);
 }
 
 .card__button {
   cursor: pointer;
   display: flex;
-  background-color: #FFFFFF;
-  border: 2px solid #000000;
+  background-color: var(--bg-main);
+  border: 2px solid var(--border-main);
   font-size: 14px;
   justify-content: center;
   padding: 10px 0;
@@ -187,7 +187,7 @@
   font-family: var(--font-accent), sans-serif;
   mix-blend-mode: difference;
   z-index: 2;
-  color: #FFFFFF;
+  color: var(--bg-main);
   position: relative;
 }
 
@@ -198,16 +198,16 @@
   mix-blend-mode: difference; /* Применяем режим смешивания и к ней по ТЗ */
   position: relative; /* Относительное позиционирование по ТЗ */
   z-index: 2; /* Выше шторки */
-  color: #FFFFFF;
+  color: var(--bg-main);
 }
 
 .main__button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: var(--bg-main);
   padding: 15px 20px;
-  border: 2px solid #000000;
+  border: 2px solid var(--border-main);
   gap: 8px;
   cursor: pointer;
   position: relative;
@@ -221,8 +221,8 @@
 .dialog-window {
   display: none;
   padding: 30px;
-  background-color: #FFFFFF;
-  border: 2px solid #000000;
+  background-color: var(--bg-main);
+  border: 2px solid var(--border-main);
 }
 
 .dialog-window[open] {
@@ -256,19 +256,53 @@
 
 .dialog__button {
   display: inline-block;
-  border: 2px solid #000000;
+  border: 2px solid var(--border-main);
   padding: 10px 0;
   inline-size: 100%;
   height: 38px;
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  background-color: #FFFFFF;
+  background-color: var(--bg-main);
   cursor: pointer;
 }
 
 .dialog-window::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Фильтры для картинок */
+
+.img-neon-night {
+  filter: contrast(1.4) hue-rotate(15deg) brightness(1.1);
+}
+
+.img-fairy-forest {
+  filter: saturate(1.8) contrast(1.2);
+}
+
+.img-frosty-night {
+  filter: hue-rotate(-20deg) saturate(1.2) contrast(1.1);
+}
+
+.img-vintage-journal {
+  filter: saturate(0.7) sepia(0.4) brightness(0.95);
+}
+
+.img-school-nostalgia {
+  filter: sepia(0.25) saturate(1.1) contrast(0.95);
+}
+
+.img-arcade-vibe {
+  filter: blur(0.8px) brightness(1.1) saturate(0.9);
+}
+
+.img-brain-storm {
+  filter: hue-rotate(-30deg) contrast(1.25) brightness(1.05);
+}
+
+.img-gamer-night {
+  filter: contrast(1.35) brightness(1.05) saturate(1.2);
 }
 
 /* Настройка тени */
